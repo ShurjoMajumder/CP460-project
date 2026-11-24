@@ -58,7 +58,7 @@ fn inv(e: usize, u: usize) -> usize {
 }
 
 fn gen_rand(seed: usize) -> usize {
-    // deterministic number in 50..1000 from seed (splitmix64 finalizer); not cryptographic
+    // deterministic "random" number from seed (splitmix64 finalizer); not cryptographic
     let mut x = (seed as u64).wrapping_add(0x9E3779B97F4A7C15);
     x = (x ^ (x >> 30)).wrapping_mul(0xBF58476D1CE4E5B9);
     x = (x ^ (x >> 27)).wrapping_mul(0x94D049BB133111EB);
